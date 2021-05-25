@@ -31,7 +31,7 @@
                     <th scope="col">Age</th>
                     <th scope="col">Address</th>
                     <th scope="col">Contact No.</th>
-                    <th scope="col">Requires</th>
+                    <th scope="col">Urgently Requires</th>
                     <th scope="col">Report</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -41,7 +41,7 @@
                     $db_select=mysqli_select_db($conn, DB_NAME) or die(mysqli_error());
 
                     $sql="SELECT * FROM patient";
-
+                    
                     $res=mysqli_query($conn,$sql);
                     
                     if($res==true){
@@ -56,9 +56,18 @@
                                 $age=$row['p_age'];
                                 $address=$row['p_address'];
                                 $contact=$row['p_contact'];
-                                $requires=$row['requires'];
+                                $item_id=$row['item_id'];
                                 $report_id=$row['report_id'];
-                            
+                                if($item_id>0){
+                                    $sql2="SELECT * FROM stock WHERE item_id=$item_id";
+                                    $res2=mysqli_query($conn, $sql2);
+                                    $row2 = mysqli_fetch_assoc($res2);
+                                    $item_name=$row2['item_name'];
+                                }
+                                else{
+                                    $item_name='None';
+                                }
+                                
                             ?>
                             <tr class="cust-light">
                                 <td><?php echo $sn++; ?></td>
@@ -66,7 +75,7 @@
                                 <td><?php echo $age; ?></td>
                                 <td><?php echo $address; ?></td>
                                 <td><?php echo $contact; ?></td>
-                                <td><?php echo $requires; ?></td>
+                                <td><?php echo $item_name; ?></td>
                                 <td>
                                     <a href="<?php echo SITEURL; ?>report.php?task_id=<?php echo $report_id; ?>"><i class="fas fa-edit">Go to Report</i></a>
                                 </td>
