@@ -15,13 +15,25 @@
         <a href="index.php">Home</a>
     </div>
     <a href="add-stock.php">Add New Stock</a>
+    <p class="pos-para">
+        <?php
+            // check if the session created or not
+            if(isset($_SESSION['add'])){
+
+                //display session message
+                echo $_SESSION['add'];
+                //remove the message after displaying once
+                unset($_SESSION['add']);
+            }
+        ?>
+    </p>
     <div class="all-lists">
             <table class="table table-info cust-table">
                 <thead>
                     <tr class="table-dark cust-dark">
                         <th scope="col">S No.</th>
                         <th scope="col">Item Name</th>
-                        <th scope="col">Total No. of Items</th>
+                        <th scope="col">Quantity</th>
                         <th scope="col">Date Of Update</th>
                         <th scope="col">Status</th>                        
                         <th scope="col">Action</th>
@@ -54,7 +66,7 @@
                             
                                 //getting data from database
                                 $item_name=$row['item_name'];
-                                $count=$row['count'];
+                                $count=$row['quantity'];
                                 $date_up=$row['date_of_update'];
                                 $status=$row['status'];
                                 
