@@ -8,6 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Corona Go</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <link rel="stylesheet" href="<?php echo SITEURL;?>css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 </head>
 <body>
     <div class="menu">
@@ -24,6 +29,11 @@
                 echo $_SESSION['add'];
                 //remove the message after displaying once
                 unset($_SESSION['add']);
+            }
+
+            if(isset($_SESSION['update'])){
+                echo $_SESSION['update'];
+                unset($_SESSION['update']);
             }
         ?>
     </p>
@@ -65,6 +75,7 @@
                             //data is present as an array
                             
                                 //getting data from database
+                                $item_id=$row['item_id'];
                                 $item_name=$row['item_name'];
                                 $count=$row['quantity'];
                                 $date_up=$row['date_of_update'];
@@ -79,8 +90,8 @@
                                     <td> <?php echo "$date_up"; ?> </td>
                                     <td> <?php echo "$status"; ?> </td>
                                     <td>
-                                        <a href="<?php echo SITEURL; ?>update-list.php?list_id=<?php echo $list_id ?>"><i class="fas fa-edit"></i></a>
-                                        <a href="<?php echo SITEURL; ?>delete-list.php?list_id=<?php echo $list_id ?>"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="<?php echo SITEURL; ?>update-stock.php?item_id=<?php echo $item_id; ?>"><i class="fas fa-edit"></i></a>
+                                        <a href="<?php echo SITEURL; ?>delete-stock.php?item_id=<?php echo $item_id; ?>"><i class="fas fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
 

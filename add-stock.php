@@ -44,10 +44,12 @@
             <label for="exampleFormControlTextarea1" class="form-label">Quantity</label>
             <input type="number" name="count" class="form-control" id="exampleFormControlTextarea1" rows="3">
         </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Status</label>
-            <input type="text" name="status" class="form-control" id="exampleFormControlTextarea1" rows="3">
-        </div>
+        <select class="form-select mb-3" name="status" placeholder="---Select an option---" required>
+            <option value="0" disabled>---Select Option---</option>
+            <option value="high">Sufficient</option>
+            <option value="medium">Deficient</option>
+            <option value="low">Urgently required</option>
+        </select>
             <button type="submit" name="submit" value="Submit" type="button" class="btn btn-primary btn-cust">Save</button>
     </form>
     <!-- form to add list ends here -->
