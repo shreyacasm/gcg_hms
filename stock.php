@@ -35,7 +35,19 @@
                 echo $_SESSION['update'];
                 unset($_SESSION['update']);
             }
+            if(isset($_SESSION['delete'])){
+                echo $_SESSION['delete'];
+                unset($_SESSION['delete']);
+            }
         ?>
+    </p>
+    <p class="neg-para">
+    <?php
+        if(isset($_SESSION['delete_fail'])){
+            echo $_SESSION['delete_fail'];
+            unset($_SESSION['delete_fail']);
+        }
+    ?>
     </p>
     <div class="all-lists">
             <table class="table table-info cust-table">
