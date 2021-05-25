@@ -18,8 +18,8 @@
 <body>
     <div class="menu">
         <h1>GO CORONA GO</h1>
-        <a href="index.php">Home</a>
-        <a href="stock.php">Go Back to Stock List</a>
+        <a href="<?php echo SITEURL; ?>">Home</a>
+        <a href="<?php echo SITEURL; ?>stock.php">Go Back to Stock List</a>
     </div>
     <h3>Add New Stock</h3>
     <p class="neg-para">
