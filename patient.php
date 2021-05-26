@@ -31,7 +31,19 @@
                 echo $_SESSION['update'];
                 unset($_SESSION['update']);
             }
+            if(isset($_SESSION['delete'])){
+                echo $_SESSION['delete'];
+                unset($_SESSION['delete']);
+            }
         ?>
+    </p>
+    <p class="neg-para">
+    <?php
+        if(isset($_SESSION['delete_fail'])){
+            echo $_SESSION['delete_fail'];
+            unset($_SESSION['delete_fail']);
+        }
+    ?>
     </p>
     <!-- Task Starts here  -->
     <div class="all-task">
@@ -105,7 +117,7 @@
                             //no tb
                             ?>
                             <tr>
-                                <td scope="row" colspan="5">No Task Added Yet</td>
+                                <td scope="row" colspan="5">No Patient Record Added Yet</td>
                             </tr>
                             <?php
                         }
