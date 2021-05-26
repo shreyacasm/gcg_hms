@@ -20,6 +20,19 @@
         <a href="<?php echo SITEURL; ?>">Home</a>
     </div>
     <a href="<?php echo SITEURL; ?>add-patient.php">Add New Patient</a>
+
+    <p class="pos-para">
+        <?php
+            if(isset($_SESSION['add'])){
+                echo $_SESSION['add'];
+                unset($_SESSION['add']);
+            }
+            if(isset($_SESSION['update'])){
+                echo $_SESSION['update'];
+                unset($_SESSION['update']);
+            }
+        ?>
+    </p>
     <!-- Task Starts here  -->
     <div class="all-task">
             <p></p>
@@ -80,8 +93,8 @@
                                     <a href="<?php echo SITEURL; ?>report.php?task_id=<?php echo $report_id; ?>"><i class="fas fa-edit">Go to Report</i></a>
                                 </td>
                                 <td>
-                                    <a href="<?php echo SITEURL; ?>update-task.php?task_id=<?php echo $task_id; ?>"><i class="fas fa-edit"></i></a>
-                                    <a href="<?php echo SITEURL; ?>delete-task.php?task_id=<?php echo $task_id; ?>"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="<?php echo SITEURL; ?>update-patient.php?p_id=<?php echo $p_id; ?>"><i class="fas fa-edit"></i></a>
+                                    <a href="<?php echo SITEURL; ?>delete-patient.php?p_id=<?php echo $p_id; ?>"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
 
