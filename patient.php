@@ -35,6 +35,10 @@
                 echo $_SESSION['delete'];
                 unset($_SESSION['delete']);
             }
+            if(isset($_SESSION['r_add'])){
+                echo $_SESSION['r_add'];
+                unset($_SESSION['r_add']);
+            }
         ?>
     </p>
     <p class="neg-para">
