@@ -82,7 +82,7 @@
                                 $address=$row['p_address'];
                                 $contact=$row['p_contact'];
                                 $item_id=$row['item_id'];
-                                $report_id=$row['report_id'];
+                                $report_status=$row['report_status'];
                                 if($item_id>0){
                                     $sql2="SELECT * FROM stock WHERE item_id=$item_id";
                                     $res2=mysqli_query($conn, $sql2);
@@ -102,8 +102,19 @@
                                 <td><?php echo $contact; ?></td>
                                 <td><?php echo $item_name; ?></td>
                                 <td>
-                                    <a href="<?php echo SITEURL; ?>report.php?task_id=<?php echo $report_id; ?>"><i class="fas fa-edit">Go to Report</i></a>
-                                </td>
+                                    <?php
+                                        if($report_status=="Pending"){
+                                            ?>
+                                            <a href="<?php echo SITEURL; ?>add-report.php?p_id=<?php echo $p_id; ?>"><i class="fas fa-edit">Add Report</i></a>    
+                                            <?php
+                                        }
+                                        else{
+                                            ?>
+                                            <a href="<?php echo SITEURL; ?>report.php?p_id=<?php echo $p_id; ?>"><i class="fas fa-edit">View Report</i></a>    
+                                            <?php
+                                        }
+                                    ?>
+                                </td>                                 
                                 <td>
                                     <a href="<?php echo SITEURL; ?>update-patient.php?p_id=<?php echo $p_id; ?>"><i class="fas fa-edit"></i></a>
                                     <a href="<?php echo SITEURL; ?>delete-patient.php?p_id=<?php echo $p_id; ?>"><i class="fas fa-trash-alt"></i></a>

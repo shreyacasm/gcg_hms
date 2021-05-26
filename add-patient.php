@@ -108,7 +108,7 @@
             p_address='$address',
             p_contact=$contact,
             item_id=$item_id,
-            report_id='Pending'
+            report_status='Pending'
         ";
         $res2 = mysqli_query($conn2, $sql2);
 
