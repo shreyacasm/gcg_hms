@@ -1,0 +1,62 @@
+/* report section */
+.report{
+    margin: 6% 10%;
+    background-color: antiquewhite;
+    background-repeat: no-repeat;
+    background-blend-mode: color-dodge;
+    width: 80%;
+    padding: 20px;
+}
+.img-responsive{
+    width: 100%;
+    overflow: hidden;
+}
+.head-block{
+    text-align: right;
+}
+.mgn-r{
+    margin: 5px 15px;
+}
+.report hr{
+    margin: 0 50px;
+    border: 3px solid rgb(209, 207, 207);
+    color:gray;
+}
+.report-details{
+    margin: 70px 50px;;
+}
+.report-details hr{
+    border-color: black;
+    color: black;
+    border: 2px solid black;
+}
+.report-details h3{
+    text-align: center;
+    border: 2px double black;
+    box-shadow: 5px 6px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.personal-data{
+    padding: 50px 0;
+}
+.personal-data p{
+    margin: 5px 0;
+}
+.report-details h4{
+    text-decoration: underline;
+    margin: 20px 0;
+    text-align: center;
+}
+.report-result{
+    margin-top: 30px;
+    font-size: 20px;
+}
+.report-result p{
+    margin: 2px;
+}
+.footer-report{
+    margin: 20px auto;
+    text-align: right;
+}
