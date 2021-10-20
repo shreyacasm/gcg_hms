@@ -15,11 +15,13 @@
         
 </head>
 <body>
-    <div class="menu">
-        <h1>GO CORONA GO</h1>
-        <a href="<?php echo SITEURL; ?>">Home</a>
-    </div>
-    <a href="<?php echo SITEURL; ?>add-patient.php">Add New Patient</a>
+    <ul>
+        <li><h1 class="menu-h1">GO CORONA GO</h1></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>stock.php">Check Stock</a></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>add-patient.php">Add New Patient</a></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>">Home</a></li>
+    </ul>
+    
 
     <p class="pos-para">
         <?php
@@ -50,6 +52,8 @@
     ?>
     </p>
     <!-- Task Starts here  -->
+    <div class="side-space">
+        <h1 style="text-align:center">Patient Records</h1>
     <div class="all-task">
             <p></p>
             <table class="table table-info cust-table">
@@ -142,5 +146,13 @@
 
         </div>
         <!-- Task Starts here  -->
-</body>
-</html>
+        </div>
+
+
+
+
+
+
+    </body>
+
+    </html>

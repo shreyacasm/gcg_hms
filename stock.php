@@ -15,11 +15,12 @@
 
 </head>
 <body>
-    <div class="menu">
-        <h1>GO CORONA GO</h1>
-        <a href="index.php">Home</a>
-    </div>
-    <a href="add-stock.php">Add New Stock</a>
+    <ul>
+        <li><h1 class="menu-h1">GO CORONA GO</h1></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>add-stock.php">Add New Stock</a></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>">Home</a></li>
+    </ul>
+    
     <p class="pos-para">
         <?php
             // check if the session created or not
@@ -49,6 +50,8 @@
         }
     ?>
     </p>
+    <div class="side-space">
+    <h1 style="text-align:center">Stock Details</h1>
     <div class="all-lists">
             <table class="table table-info cust-table">
                 <thead>
@@ -126,5 +129,7 @@
 
         </div>
         
-</body>
+
+    </div>
+    </body>
 </html>

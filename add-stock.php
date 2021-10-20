@@ -16,11 +16,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
-    <div class="menu">
-        <h1>GO CORONA GO</h1>
-        <a href="<?php echo SITEURL; ?>">Home</a>
-        <a href="<?php echo SITEURL; ?>stock.php">Go Back to Stock List</a>
-    </div>
+    <ul>
+        <li><h1 class="menu-h1">GO CORONA GO</h1></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>stock.php">Go back to stock</a></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>">Home</a></li>
+    </ul>
+    
+    <div class="side-space">
     <h3>Add New Stock</h3>
     <p class="neg-para">
         <?php
@@ -44,7 +46,9 @@
             <label for="exampleFormControlTextarea1" class="form-label">Quantity</label>
             <input type="number" name="count" class="form-control" id="exampleFormControlTextarea1" rows="3">
         </div>
+        <label for="exampleFormControlTextarea1" class="form-label">Status</label>
         <select class="form-select mb-3" name="status" placeholder="---Select an option---" required>
+            
             <option value="0" disabled>---Select Option---</option>
             <option value="high">Sufficient</option>
             <option value="medium">Deficient</option>
@@ -52,6 +56,7 @@
         </select>
             <button type="submit" name="submit" value="Submit" type="button" class="btn btn-primary btn-cust">Save</button>
     </form>
+    </div>
     <!-- form to add list ends here -->
 </body>
 </html>
