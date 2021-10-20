@@ -1,1 +1,1 @@
-# gcg_hms
+# GoCoronaGO_HospitalManagementSystem
