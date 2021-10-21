@@ -17,11 +17,12 @@
 
 </head>
 <body>
-    <div class="menu">
-        <h1>GO CORONA GO</h1>
-        <a href="<?php echo SITEURL; ?>">Home</a>
-        <a href="<?php echo SITEURL; ?>patient.php">Go Back to Patient List</a>
-    </div>
+    <ul>
+        <li><h1 class="menu-h1">GO CORONA GO</h1></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>patient.php">Go back to Patient List</a></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>">Home</a></li>
+    </ul>
+    <div class="side-space">
     <h3>Add Report</h3>
     <p  class="neg-para">
         <?php
@@ -46,6 +47,7 @@
         <button type="submit" name="submit" value="Save" type="button" class="btn btn-primary btn-cust">Save</button>
         
     </form>
+    </div>
 </body>
 </html>
 <?php

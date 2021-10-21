@@ -38,7 +38,7 @@
 
 <html>
 <head>
-    <title>Task Manager</title>
+    <title>Go Corona Go</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
@@ -46,11 +46,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
-    <div class="menu">
-        <h1>GO CORONA GO</h1>
-        <a href="<?php echo SITEURL; ?>">Home</a>
-        <a href="<?php echo SITEURL; ?>patient.php">Go Back to Patient List</a>
-    </div>
+    <ul>
+        <li><h1 class="menu-h1">GO CORONA GO</h1></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>patient.php">Go back to Patient List</a></li>
+        <li style="float:right"><a class="menu-h1" href="<?php echo SITEURL; ?>">Home</a></li>
+    </ul>
+    <div class="side-space">
     <h3>Add Patient Details</h3>
     <p  class="neg-para">
         <?php
@@ -110,6 +111,7 @@
             
         
     </form>
+    </div>
 </body>
 </html> 
 <?php

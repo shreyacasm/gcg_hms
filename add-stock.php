@@ -50,9 +50,9 @@
         <select class="form-select mb-3" name="status" placeholder="---Select an option---" required>
             
             <option value="0" disabled>---Select Option---</option>
-            <option value="high">Sufficient</option>
-            <option value="medium">Deficient</option>
-            <option value="low">Urgently required</option>
+            <option value="Sufficient">Sufficient</option>
+            <option value="Deficient">Deficient</option>
+            <option value="Urgently required">Urgently required</option>
         </select>
             <button type="submit" name="submit" value="Submit" type="button" class="btn btn-primary btn-cust">Save</button>
     </form>
